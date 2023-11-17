@@ -1,0 +1,34 @@
+.row-margin {
+  margin: 25px;
+}
+
+.circle-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+#circle {
+  display: inline-block;
+  position: relative;
+  width : 200px;
+  height : 200px;
+  border-radius: 50%;
+  background-color: lightgrey;
+  margin: 10px;
+  text-align: center;
+}
+
+#content {
+  position: relative;
+  font-size: x-large;
+  top: 70px;
+  text-align: center;
+}
+
+#text {
+  position: relative;
+  top: 25%;
+  font-size: large;
+  text-align: center;
+}
+

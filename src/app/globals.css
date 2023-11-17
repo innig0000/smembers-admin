@@ -8,7 +8,7 @@
   --background-end-rgb: 255, 255, 255;
 }
 
-@media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: light) {
   :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -24,4 +24,82 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+input {
+  background-color: lightgray !important;
+}
+
+.logo {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.logout {
+  background-color: darkgrey;
+  color: lightgray;
+  padding: 5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu {
+  display: flex;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 2px solid grey;
+  text-decoration-line: none;
+  color: black;
+  background-color: lightgray;
+  justify-content: center;
+}
+
+.header {
+  margin: 30px;
+}
+
+header {
+  background-color: lightgray;
+  z-index: 1000;
+}
+
+header::before,
+header::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 1px;
+  background-color: grey;
+}
+
+header::before {
+  left: 5%;
+}
+
+header::after {
+  right: 5%;
+}
+
+Table {
+  border-color: white !important;
+}
+
+th {
+  background-color: lightgray !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+  height: 50px;
+}
+
+td {
+  text-align: center !important;
 }
