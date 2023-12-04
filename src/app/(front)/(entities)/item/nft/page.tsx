@@ -8,7 +8,7 @@ const Nft = () => {
             <h1 className="flex text-xl font-bold m-3">상품 관리</h1>
             <button className="ml-auto mb-2 rounded-2 pl-5 pr-5 bg-gray-300 text-black">
                 최신순
-                <span className="transform -translate-x-1/2 text-sm">&#9660;</span>
+                <span className="ms-2 transform -translate-x-1/2 text-sm text-black-50" style={{ display: 'inline-block', transform: 'rotate(90deg)' }}>》</span>
             </button>
             <Table>
                 <thead>

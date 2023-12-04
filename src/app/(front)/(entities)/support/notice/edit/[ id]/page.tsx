@@ -100,22 +100,24 @@ const NoticeEdit = () => {
                             onClick={(e) => e.stopPropagation()}
                             className="hidden border rounded-md p-2 border-gray-300 w-full h-[45px] bg-white"
                         />
-                        <div className="col-span-2 flex flex-col m-3">
+                        <span className="col-span-2 flex flex-col m-3 relative">
+                            <div className="flex justify-between items-start w-full">
                             <label
                                 htmlFor="fileInput"
-                                className="cursor-pointer border rounded-md p-2 border-gray-30 h-[45px] relative text-center"
+                                className="cursor-pointer border rounded-md p-2 border-gray-30 h-[45px] relative text-center w-[200px]"
                             >
                                 {fileName}
-                                {fileName !== '파일명' && (
-                                    <button
-                                        className="border-black-50 pl-1 pr-1 absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 rounded-full bg-secondary-subtle text-black-50 border cursor-pointer"
-                                        onClick={handleRemoveFile}
-                                    >
-                                        <span className="rounded-3 text-black-50 border cursor-pointer">&times;</span>
-                                    </button>
-                                )}
                             </label>
-                        </div>
+                            {fileName !== '파일명' && (
+                                <button
+                                    className="absolute top-0 right-0 transform -translate-y-1/2 translate-x-1/2 border-black-50 pl-1 pr-1 rounded-full bg-secondary-subtle text-black-50 border cursor-pointer"
+                                    onClick={handleRemoveFile}
+                                >
+                                    <span className="rounded-3 text-black-50 border cursor-pointer">&times;</span>
+                                </button>
+                            )}
+                            </div>
+                        </span>
                         <div className="col-span-1 flex flex-col m-1">
                             <label className="text-lg font-bold mb-1 text-center mt-3">
                                 내용

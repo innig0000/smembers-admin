@@ -103,3 +103,17 @@ th {
 td {
   text-align: center !important;
 }
+
+.pagination {
+  background-color: rgba(0,0,0,0.1);
+}
+
+.pagination .page-item.active .page-link{
+  background-color: whitesmoke;
+  color: black;
+  border-color: grey;
+}
+
+.pagination .page-item:not(.active) .page-link {
+  color: grey;
+}

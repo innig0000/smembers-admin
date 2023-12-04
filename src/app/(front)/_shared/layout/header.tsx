@@ -9,6 +9,18 @@ const Header = () => {
     const [isItemOpen, setItemOpen] = useState(false);
     const [isSupportOpen, setSupportOpen] = useState(false);
     const [show, setShow] = useState(false);
+    const dropMenuRef = useRef<HTMLDivElement | null>(null);
+
+    useEffect(() => {
+    const handleOutsideClose = (e: {target : any}) => {
+        if(!dropMenuRef.current?.contains(e.target)) {
+            setMemberOpen(false);
+            setItemOpen(false);
+            setSupportOpen(false);
+        }
+    }
+    document.addEventListener('click', handleOutsideClose);
+    },[])
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -33,7 +45,7 @@ const Header = () => {
 
     return(
     <header className="absolute h-20 top-0 left-0 right-0 p-3 ...">
-        <div className="container mx-auto flex items-center justify-between font-semibold">
+        <div ref={dropMenuRef} className="container mx-auto flex items-center justify-between font-semibold">
             <Link href="/dashboard">
             <button className="logo">
                 SMEMBERS

@@ -1,5 +1,6 @@
 import Header from "@/app/(front)/_shared/layout/header";
 import {Table} from "react-bootstrap";
+import MyPagination from "@/app/(front)/_shared/layout/pagination";
 
 const ApprovedMember = () => {
     return(
